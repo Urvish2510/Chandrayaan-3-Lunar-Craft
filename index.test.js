@@ -40,4 +40,10 @@ describe('Chandrayaan3LunarCraft', () => {
         expect(c.getPosition()).toEqual('Position : [ 0, 0, 0 ] Direction : Down');
     })
 
+    test('Chandrayaan3 move as per given array of commands correctly', () => {
+        const c = new Chandrayaan3LunarCraft({ x: 0, y: 0, z: 0 }, 'N');
+        const result = c.getCoordinates(['f', 'r', 'u', 'b', 'l']);
+        expect(result).toEqual('Position : [ 0, 1, -1 ] Direction : N');
+    })
+
 })
