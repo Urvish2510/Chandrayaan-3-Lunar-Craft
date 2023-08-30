@@ -42,6 +42,94 @@ class Chandrayaan3LunarCraft {
         }
     }
 
+    turnLeft() {
+        if (this.direction === 'N') {
+            this.direction = 'W';
+            this.prevDirection = 'N';
+        } else if (this.direction === 'S') {
+            this.direction = 'E';
+            this.prevDirection = 'S';
+        } else if (this.direction === 'E') {
+            this.direction = 'N';
+            this.prevDirection = 'E';
+        } else if (this.direction === 'W') {
+            this.direction = 'S';
+            this.prevDirection = 'W';
+        } else if (this.direction === 'Up') {
+            if (this.prevDirection === "N") {
+                this.direction = 'W';
+                this.prevDirection = 'Up';
+            } else if (this.prevDirection === "S") {
+                this.direction = 'E';
+                this.prevDirection = 'Up';
+            } else if (this.prevDirection === "E") {
+                this.direction = 'N';
+                this.prevDirection = 'Up';
+            } else if (this.prevDirection === "W") {
+                this.direction = 'S';
+                this.prevDirection = 'Up';
+            }
+        } else if (this.direction === 'Down') {
+            if (this.prevDirection === "N") {
+                this.direction = 'W';
+                this.prevDirection = 'Down';
+            } else if (this.prevDirection === "S") {
+                this.direction = 'E';
+                this.prevDirection = 'Down';
+            } else if (this.prevDirection === "E") {
+                this.direction = 'N';
+                this.prevDirection = 'Down';
+            } else if (this.prevDirection === "W") {
+                this.direction = 'S';
+                this.prevDirection = 'Down';
+            }
+        }
+    }
+
+    turnRight() {
+        if (this.direction === 'N') {
+            this.direction = 'E';
+            this.prevDirection = 'N';
+        } else if (this.direction === 'S') {
+            this.direction = 'W';
+            this.prevDirection = 'S';
+        } else if (this.direction === 'E') {
+            this.direction = 'S';
+            this.prevDirection = 'E';
+        } else if (this.direction === 'W') {
+            this.direction = 'N';
+            this.prevDirection = 'W';
+        } else if (this.direction === 'Up') {
+            if (this.prevDirection === 'N') {
+                this.direction = 'E';
+                this.prevDirection = 'Up';
+            } else if (this.prevDirection === 'S') {
+                this.direction = 'W';
+                this.prevDirection = 'Up';
+            } else if (this.prevDirection === 'E') {
+                this.direction = 'S';
+                this.prevDirection = 'Up';
+            } else if (this.prevDirection === 'W') {
+                this.direction = 'N';
+                this.prevDirection = 'Up';
+            }
+        } else if (this.direction === 'Down') {
+            if (this.prevDirection === 'N') {
+                this.direction = 'E';
+                this.prevDirection = 'Down';
+            } else if (this.prevDirection === 'S') {
+                this.direction = 'W';
+                this.prevDirection = 'Down';
+            } else if (this.prevDirection === 'E') {
+                this.direction = 'S';
+                this.prevDirection = 'Down';
+            } else if (this.prevDirection === 'W') {
+                this.direction = 'N';
+                this.prevDirection = 'Down';
+            }
+        }
+    }
+
     getPosition() {
         return `Position : [ ${this.coordinates.x}, ${this.coordinates.y}, ${this.coordinates.z} ] Direction : ${this.direction}`;
     }
