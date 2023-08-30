@@ -130,6 +130,16 @@ class Chandrayaan3LunarCraft {
         }
     }
 
+    turnUp() {
+        this.prevDirection = this.direction;
+        this.direction = 'Up';
+    }
+
+    turnDown() {
+        this.prevDirection = this.direction;
+        this.direction = 'Down';
+    }
+
     getPosition() {
         return `Position : [ ${this.coordinates.x}, ${this.coordinates.y}, ${this.coordinates.z} ] Direction : ${this.direction}`;
     }
