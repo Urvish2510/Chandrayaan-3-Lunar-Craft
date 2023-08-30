@@ -1,0 +1,22 @@
+{
+  "name": "chandrayaan3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Urvish2510/Chandrayaan-3-Lunar-Craft.git"
+  },
+  "author": "Urvish Patel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Urvish2510/Chandrayaan-3-Lunar-Craft/issues"
+  },
+  "homepage": "https://github.com/Urvish2510/Chandrayaan-3-Lunar-Craft#readme",
+  "devDependencies": {
+    "jest": "^29.6.4"
+  }
+}
