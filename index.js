@@ -140,9 +140,32 @@ class Chandrayaan3LunarCraft {
         this.direction = 'Down';
     }
 
+    getCoordinates(commands) {
+        for (const command of commands) {
+            if (command === 'f') {
+                this.moveForward();
+            } else if (command === 'b') {
+                this.moveBackward();
+            } else if (command === 'l') {
+                this.turnLeft();
+            } else if (command === 'r') {
+                this.turnRight();
+            } else if (command === 'u') {
+                this.turnUp();
+            } else if (command === 'd') {
+                this.turnDown();
+            }
+        }
+
+        var result = `Position : [ ${this.coordinates.x}, ${this.coordinates.y}, ${this.coordinates.z} ] Direction : ${this.direction}`;
+        return result;
+    }
+
     getPosition() {
         return `Position : [ ${this.coordinates.x}, ${this.coordinates.y}, ${this.coordinates.z} ] Direction : ${this.direction}`;
     }
 }
+
+
 
 module.exports = Chandrayaan3LunarCraft;
